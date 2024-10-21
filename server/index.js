@@ -14,7 +14,7 @@ app.use("/music", express.static(path.join(path.resolve(), "music")));
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000", // URL клиента
+        origin: "http://ekiari.ru", // URL клиента
         methods: ["GET", "POST"],
     },
 });

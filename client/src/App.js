@@ -8,7 +8,7 @@ function App() {
     const [songUrl, setSongUrl] = useState("");
     const [error, setError] = useState(null);
     const audioRef = useRef(null);
-    const socket = io("http://localhost:3001");
+    const socket = io("http://185.228.234.191:3001");
 
     useEffect(() => {
         socket.on("playSong", (url) => {
@@ -23,7 +23,7 @@ function App() {
 
     const fetchRandomSong = async () => {
         try {
-            await axios.get("http://localhost:3001/random-song");
+            await axios.get("http://185.228.234.191:3001/random-song");
         } catch (error) {
             console.error("Error fetching song:", error);
             setError("Failed to fetch song");
